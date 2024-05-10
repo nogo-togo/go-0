@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "game/game";
+//option java_multiple_files = true;
+//option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "GameProto";
+
+package helloworld;
+
+// The greeting service definition.
+service Game {
+  // Sends a greeting
+  rpc Play (GameRequest) returns (GameReply) {}
+  // Sends another greeting
+//  rpc SayHelloAgain (GameRequest) returns (GameReply) {}
+}
+
+// The request message containing the user's name.
+message GameRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message GameReply {
+  string message = 1;
+}
